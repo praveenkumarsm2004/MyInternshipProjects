@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: darkslateblue;
+    font-family: 'Times New Roman', Times, serif;
+    overflow-x: hidden; 
+    margin: 0 auto;
+}  
+
+#image1 {
+    width: 9.375em; 
+    position: absolute;
+    top: 1.0625em; 
+    right: 1.0625em;
+}
+
+#log {
+    position: absolute;
+    top: 4em; 
+    right: 2.5em; 
+}
+
+#p1 {
+  position: relative;
+  font-size: 2.5em; 
+  font-weight: bold;
+  top: 1.875em; 
+  left: 13.5em; 
+}
+
+#head1 {
+    position: relative;
+    left: 6.125em;
+}
+  
+  .sec-container {
+    max-width: 35.25em;
+    margin: 3.125em auto;
+    border: 0.1875em solid darkslateblue;
+    background-color: #ffffff;
+    border-radius: 0.3125em; 
+    padding: 1.25em; 
+    font-weight: bold;
+  }
+  
+  .sec-container label {
+    font-size: 1.2em;
+    display: inline-block;
+    width: 5em; 
+  }
+  
+.sec-container select {
+    width: 25em;
+    padding: 0.3125em; 
+    border: 0.0625em solid #ccc;
+    border-radius: 0.3125em; 
+    font-family: 'Times New Roman', Times, serif;
+    color: darkslateblue;
+    font-weight: bold;
+    font-size: 1.0625em; 
+  }
+  
+  button {
+    background-color: darkslateblue;
+    color: #fff;
+    border: none;
+    border-radius: 0.3125em; 
+    padding: 0.625em 1.25em; 
+    cursor: pointer;
+  }
+
+.d {
+    max-width: 40.25em;
+    background-color: #ffffff;
+    padding: 1.25em; 
+    font-weight: bold;
+  }
+
+  .d label{
+    width:25em;
+    font-size: 1.2em;
+    display: inline-block;
+    width: 180px; 
+  }
+
+  .d select {
+    width: 20em;
+    padding: 0.3125em; 
+    border: 0.0625em solid #ccc;
+    border-radius: 0.3125em; 
+    font-family: 'Times New Roman', Times, serif;
+    color: darkslateblue;
+    font-weight: bold;
+    font-size: 1.0625em; 
+  }
+
+  .d input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    color: darkslateblue;
+    font-weight: bold;
+    font-size: 17px;
+  }
+
+  ::placeholder {
+    font-family: 'Times New Roman', Times, serif;
+    color: darkslateblue;
+    font-weight: bold;
+    font-size: 17px;
+  }
+
+
+
+  

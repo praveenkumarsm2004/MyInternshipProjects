@@ -1,0 +1,60 @@
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+    background-size: cover;
+    background-color: #f0f0f0;
+    background-size: 100%;
+    background-position-x: 0px;
+    background-position-y: 70px;
+    font-weight: bold;
+}
+
+.one {
+    width: 35rem;
+    height: 35rem;
+    position: absolute;
+    top: 15rem;
+    left: 7rem;
+  }
+
+  .p1 {
+    font-size: 2rem;
+    position: absolute;
+    line-height: 3.5rem;
+    top: 15rem;
+    color: black;
+    font-family: 'Sriracha', cursive;
+    right: 8rem;
+    text-align: justify;
+    left: 48rem;
+  }
+
+  .two {
+    width: 35rem;
+    height: 35rem;
+    position: absolute;
+    top: 55rem;
+    right: 7rem;
+  }
+
+  .p2 {
+    font-size: 2rem;
+    position: absolute;
+    line-height: 3.5rem;
+    top: 58rem;
+    color: black;
+    font-family: 'Sriracha', cursive;
+    left: 8rem;
+    text-align: justify;
+    right: 48rem;
+  }

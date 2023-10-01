@@ -1,0 +1,50 @@
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+  background-size: cover;
+  background-color: #f0f0f0;
+  background-size: 100%;
+  background-position-x: 0;
+  background-position-y: 7rem;
+  font-weight: bold;
+}
+
+.p2 {
+  font-size: 3rem;
+  position: absolute;
+  top: 15rem;
+  color: black;
+  font-family: 'Sriracha', cursive;
+  left: 55rem;
+}
+
+.p3 {
+  font-size: 2rem;
+  position: absolute;
+  line-height: 3.5rem;
+  top: 23rem;
+  color: black;
+  font-family: 'Sriracha', cursive;
+  right: 8rem;
+  text-align: justify;
+  left: 55rem;
+}
+
+.up {
+  width: 40rem;
+  height: 40rem;
+  position: absolute;
+  top: 22rem;
+  right: 95rem;
+}
+

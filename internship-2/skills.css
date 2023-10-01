@@ -1,0 +1,46 @@
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+  background-size: cover;
+  background-color: #f0f0f0;
+  background-size: 100%;
+  background-position-x: 0;
+  background-position-y: 7rem;
+  font-weight: bold;
+}
+
+.com {
+  font-weight: bold;
+  color: green;
+  font-size: 2.5rem;
+  font-family: 'Sriracha', cursive;
+  position: relative;
+  display: block;
+  margin-top: 5rem;
+  margin-left: 10rem;;
+}
+
+.com + ul {
+  list-style-type:circle;
+  padding: 0;
+  margin-top: 0.5rem;
+  margin-left:14rem;
+  font-family: 'Sriracha', cursive;
+}
+
+.com + ul li {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}

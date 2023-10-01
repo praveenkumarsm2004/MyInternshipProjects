@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <title>
+        Contact
+    </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="nav.css">
+</head>
+
+<body>
+    <header class="header" id="above">
+        <a style="font-size:35px;" class="logo">praveen__kumar__s</a>
+        <nav class="navbar1">
+            <a href="front.html">home</a>
+            <a href="aboutme.html">about me</a>
+            <a href="skills.html">skills</a>
+            <a href="projects.html">projects</a>
+            <a href="contact.html">contact</a>
+        </nav>
+    </header>
+    <h1 class="main">
+        Contact Me
+    </h1>
+    <div id="contactus" class="contact__container">
+        <p>Get in Touch</p>
+        <br><br>
+        <span style=" font-size: 20px;">You can contact me down here for any information.</span>
+        <br><br><br>
+        <br><br><br>
+        <a href="https://www.instagram.com/praveen__kumar__s/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/praveen-kumar-s-4264a0262" target="_blank"><i
+                class="fab fa-linkedin"></i></a>
+        <a href="mailto:praveenkumarsm.2004@gmail.com"><i class="far fa-envelope"></i></a>
+        <a href="tel:+918861599845"><i class="fas fa-phone"></i></a>
+        <a href="https://api.whatsapp.com/send?phone=+918861599845"><i class="fab fa-whatsapp"></i></a>
+        <br><br><br><br><br>
+    </div>
+    <div class="right">
+        <br><br><br>
+        <div class="text">Message me</div>
+        <form onsubmit="return showMessage()">
+            <div class="fields">
+                <div class="field name">
+                    <input type="text" name="Name" placeholder="Name" required>
+                </div>
+                <div class="field email">
+                    <input type="email" name="Email" placeholder="Email" required>
+                </div>
+            </div>
+            <div class="field">
+                <input type="text" name="Subject" placeholder="Subject" required>
+            </div>
+            <div class="field textarea">
+                <textarea cols="30" rows="4" name="Text" placeholder="Message.." required></textarea>
+            </div>
+            <div class="bttn">
+                <button type="submit" class="b3">Send message</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        function showMessage() {
+    alert("Message sent successfully");
+    document.forms["submit-to-google-sheet"].reset();
+    return false;
+}
+    </script>
+</body>
+
+</html>

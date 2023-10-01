@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>The AcademicsVault</title>
+    <link rel="stylesheet" href="view.css">
+</head>
+
+<body>
+    <img id="image1" src="NHCE.jpg" />
+    <button onclick="gotoMain(event)" id="log">Log out</button>
+    <button onclick="gotoDash(event)" id="dash">Dashboard</button>
+    <p id="p1">The AcademicsVault</p>
+    <br>
+    <div class="sec-container">
+        <h1 id="head1">View Record</h1>
+        <br><br><br><br><br>
+        <label>USN : </label>
+        <input type="text" id="usn" placeholder="Enter USN">
+        <br><br>
+        <button onclick="search(event)"> View </button>
+    </div>
+    <div id="Student">
+    </div>
+    <script>
+        let Student = document.getElementById("Student");
+        let usn = document.getElementById("usn");
+        function getData(key) {
+            return JSON.parse(localStorage.getItem(key))
+        }
+        function search(event) {
+            let found = getData("students").find((s) => s.usn == usn.value)
+            console.log(found)
+            if (found == undefined) {
+                window.alert("Student Record Not Found!!!\n\nEnter a Vaild USN");
+            }
+            console.log(usn.value)
+            Student.innerHTML = ""
+            let details = document.createElement("div")
+            details.innerHTML = `
+            <div class="d" id="details">
+                <label>Photo :</label>
+                <img src=${found.url} width="100px">
+                <br><br>
+                <label>Student Name :</label>
+                <p>${found.name}</p>
+                <br>
+                <label>USN :</label>
+                <p>${found.usn}</p>
+                <br>
+                <label>DOB :</label>
+                <p>${found.dob}</p>
+                <br>
+                <label>Gender :</label>
+                <p>${found.gender}</p>
+                <br>
+                <label>Branch :</label>
+                <p>${found.branch}</p>
+                <br>
+                <label>Semester :</label>
+                <p>${found.semester}</p>
+                <br>
+                <label>Section :</label>
+                <p>${found.section}</p>
+                <br>
+                <label>CGPA :</label>
+                <p>${found.cgpa}</p>
+                <br>
+                <label>Email ID :</label>
+                <p>${found.email}</p>
+                <br>
+                <label>Mobile No. :</label>
+                <p>${found.mobNo}</p>
+                <br>
+                <label>Father's Name :</label>
+                <p>${found.fname}</p>
+                <br>
+                <label>Mother's Name :</label>
+                <p>${found.mname}</p>
+                <br>
+            </div>
+            `
+            Student.appendChild(details)
+            window.scrollTo(0, 0);
+        }
+        function gotoMain(event) {
+            event.preventDefault();
+            window.location.href = "front.html";
+        }
+        function gotoDash(event) {
+            event.preventDefault();
+            window.location.href = "dashboard.html";
+        }
+    </script>
+</body>
+
+</html>

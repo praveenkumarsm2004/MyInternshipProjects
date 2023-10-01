@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="front.css">
+    <link rel="stylesheet" href="nav.css">
+</head>
+
+<body>
+    <header class="header" id="above">
+        <a style="font-size:35px;" class="logo">praveen__kumar__s</a>
+        <nav class="navbar1">
+            <a href="front.html">home</a>
+            <a href="aboutme.html">about me</a>
+            <a href="skills.html">skills</a>
+            <a href="projects.html">projects</a>
+            <a href="contact.html">contact</a>
+        </nav>
+    </header>
+    <div>
+        <p class="p1">Welcome to my Portfolio</p>
+        <br>
+        <p class="p2">Hello, I'm Praveen Kumar S</p>
+        <br>
+        <p class="p3">a second-year engineering student with a passion for innovation and problem-solving. My
+            journey
+            into the world of engineering began with a fascination for technology and design, sparking my
+            interest in
+            the field. Now, as I progress through my engineering education, I'm excited to share my projects and
+            experiences.<br><br>
+        </p>
+
+    </div>
+
+    <button class="b1" onclick="window.open('file:my_resume.pdf', '_blank');">Download CV</button>
+
+    <script>
+        window.addEventListener('beforeunload', () => {
+            window.scrollTo(0, 0);
+        });
+    </script>
+</body>
+
+</html>

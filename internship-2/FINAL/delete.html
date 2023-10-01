@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>The AcademicsVault</title>
+    <link rel="stylesheet" href="delete.css">
+</head>
+
+<body>
+    <img id="image1" src="NHCE.jpg" />
+    <button onclick="gotoMain(event)" id="log">Log out</button>
+    <button onclick="gotoDash(event)" id="dash">Dashboard</button>
+    <p id="p1">The AcademicsVault</p>
+    <br>
+    <div class="sec-container">
+        <h1 id="head1">Delete Record</h1>
+        <br>
+        <label>USN : </label>
+        <input type="text" id="usn" placeholder="Enter USN">
+        <br><br>
+        <button onclick="deleteRecord(event)"> Submit </button>
+        <script>
+            function gotoMain(event) {
+                event.preventDefault();
+                window.location.href = "front.html";
+            }
+            function gotoDash(event) {
+                event.preventDefault();
+                window.location.href = "dashboard.html";
+            }
+            function getData(key) {
+                return JSON.parse(localStorage.getItem(key)) || [];
+            }
+            function deleteRecord() {
+                const usnToDelete = document.getElementById("usn").value;
+                let currentData = getData("students");
+                const newData = currentData.filter(student => student.usn !== usnToDelete);
+                if (newData.length === currentData.length) {
+                    window.alert("Student Record Not Found!!!\n\nEnter a Valid USN");
+                } else {
+                    localStorage.setItem("students", JSON.stringify(newData));
+                    window.alert("Student Record Deleted Successfully!!");
+                    window.location.reload();
+                }
+                window.location.href = "dashboard.html";
+            }   
+        </script>
+</body>
+
+</html>

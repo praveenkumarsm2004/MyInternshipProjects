@@ -1,0 +1,114 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #483d8b;
+  font-family: 'Times New Roman', Times, serif;
+  overflow-x: hidden;
+  margin: 0 auto;
+  overflow-y: hidden;
+}
+
+
+#image1 {
+  width: 9.375em;
+  position: absolute;
+  top: 1.0625em;
+  right: 1.0625em;
+}
+
+#log {
+  position: absolute;
+  top: 4em;
+  right: 2.5em;
+}
+
+#p1 {
+  position: relative;
+  font-size: 2.5em;
+  font-weight: bold;
+  top: 1.875em;
+  left: 13.5em;
+}
+
+#head1 {
+  position: absolute;
+  left: 20.125em;
+}
+
+.sec-container {
+  max-width: 23.25em;
+  height: 23.625em;
+  margin: 3.125em auto;
+  border: 0.1875em solid darkslateblue;
+  background-color: #ffffff;
+  border-radius: 0.3125em;
+  padding: 1.25em;
+  font-weight: bold;
+}
+
+#create {
+  width: 9.375em;
+  height: 5.3125em;
+  position: absolute;
+  border: 0.125em solid darkslateblue;
+  left: 34em;
+  top: 20em;
+}
+
+#head2 {
+  position: absolute;
+  left: 2.8em;
+}
+
+#edit {
+  width: 9.375em;
+  height: 5.3125em;
+  position: absolute;
+  border: 0.125em solid #483d8b;
+  left: 46.125em;
+  top: 20em;
+}
+
+#head3 {
+  position: absolute;
+  left: 3.12em;
+}
+
+#view {
+  width: 9.375em;
+  height: 5.3125em;
+  position: absolute;
+  border: 0.125em solid darkslateblue;
+  left: 34em;
+  top: 30em;
+}
+
+#head4 {
+  position: absolute;
+  left: 3.12em;
+}
+
+#delete {
+  width: 9.375em;
+  height: 5.3125em;
+  position: absolute;
+  border: 0.125em solid darkslateblue;
+  left: 46.125em;
+  top: 30em;
+}
+
+#head5 {
+  position: absolute;
+  left: 2.8em;
+}
+
+button {
+  background-color: darkslateblue;
+  color: #fff;
+  border: none;
+  border-radius: 0.3125em;
+  padding: 0.625em 1.25em;
+  cursor: pointer;
+}

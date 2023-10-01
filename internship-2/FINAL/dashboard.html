@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>The AcademicsVault</title>
+    <link rel="stylesheet" href="dashboard.css">
+
+</head>
+
+<body>
+    <img id="image1" src="NHCE.jpg"><br>
+    <button onclick="gotoMain(event)" id="log">Log out</button>
+    <p id="p1">The AcademicsVault</p>
+    <br>
+    <div class="sec-container">
+        <h1 id="head1">Dashboard</h1>
+        <div id="create">
+            <img src="create.png" width="150px" onclick="gotoCreate(event)">
+            <h3 id="head2">Create</h3>
+        </div>
+        <br><br><br>
+        <div id="edit">
+            <img src="edit.png" width="150px" onclick="gotoEdit(event)">
+            <h3 id="head3">Edit</h3>
+        </div>
+        <br><br><br>
+        <div id="view">
+            <img src="view.png" width="150px" onclick="gotoView(event)">
+            <h3 id="head4">View</h3>
+        </div>
+        <div id="delete">
+            <img src="delete.png" width="150px" onclick="gotoDelete(event)">
+            <h3 id="head5">Delete</h3>
+        </div>
+        <br><br><br>
+    </div>
+    <script>
+        function gotoCreate(event) {
+            event.preventDefault();
+            window.location.href = "Create.html";
+        }
+        function gotoView(event) {
+            event.preventDefault();
+            window.location.href = "View.html";
+        }
+        function gotoMain(event) {
+            event.preventDefault();
+            window.location.href = "front.html";
+        }
+        function gotoEdit(event) {
+            event.preventDefault();
+            window.location.href = "edit.html";
+        }
+        function gotoDelete(event) {
+            event.preventDefault();
+            window.location.href = "delete.html";
+        }
+    </script>
+</body>
+
+</html>

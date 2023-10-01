@@ -1,0 +1,140 @@
+<html>
+
+<head>
+    <title>The AcademicsVault</title>
+    <link rel="stylesheet" href="edit.css">
+</head>
+
+<body>
+    <img id="image1" src="NHCE.jpg" />
+    <button onclick="gotoMain(event)" id="log">Log out</button>
+    <button onclick="gotoDash(event)" id="dash">Dashboard</button>
+    <p id="p1">The AcademicsVault</p>
+    <br>
+    <div class="sec-container">
+        <h1 id="head1">Edit Record</h1>
+        <br>
+        <label>USN : </label>
+        <input type="text" id="usn" placeholder="Enter USN">
+        <br><br>
+        <button onclick="search(event)"> Submit </button>
+    </div>
+    <div id="Student">
+    </div>
+
+    <script>
+        let Student = document.getElementById("Student");
+        let found = {}
+        let usn = document.getElementById("usn");
+        function getData(key) {
+            return JSON.parse(localStorage.getItem(key))
+        }
+        function search(event) {
+             found = getData("students").find((s) => s.usn == usn.value)
+             details = document.createElement("div")
+            if (found == undefined) {
+                window.alert("Student Record Not Found!!!\n\nEnter a Vaild USN");
+            }
+            details.innerHTML = `
+            <form onsubmit="gotoDashboard(event)">
+            <div class="d" id="details">
+                <label for="branch"><b>Branch :</b></label>
+                <select name="branch" required>
+                    <option value="" disabled selected>--Select Student Branch--</option>
+                    <option value="CSE" ${found.branch === 'CSE' ? 'selected' : ''}>Computer Science & Engineering</option>
+                </select>
+                <br><br><br>
+                <label for="Semester"><b>Semester :</b></label>
+                <select name="semester" required>
+                    <option value="" disabled selected>--Select Semester--</option>
+                    <option value="3" ${found.semester === '3' ? 'selected' : ''}>III</option>
+                    <option value="4" ${found.semester === '4' ? 'selected' : ''}>IV</option>
+                    <option value="5" ${found.semester === '5' ? 'selected' : ''}>V</option>
+                    <option value="6" ${found.semester === '6' ? 'selected' : ''}>VI</option>
+                    <option value="7" ${found.semester === '7' ? 'selected' : ''}>VII</option>
+                    <option value="8" ${found.semester === '8' ? 'selected' : ''}>VIII</option>
+                </select>
+                <br><br><br>
+                <label for="Section"><b>Section :</b></label>
+                <select name="section" required>
+                    <option value="" disabled selected>--Select Section--</option>
+                    <option value="A" ${found.section === 'A' ? 'selected' : ''}>A</option>
+                    <option value="B" ${found.section === 'B' ? 'selected' : ''}>B</option>
+                    <option value="C" ${found.section === 'C' ? 'selected' : ''}>C</option>
+                    <option value="D" ${found.section === 'D' ? 'selected' : ''}>D</option>
+                    <option value="E" ${found.section === 'E' ? 'selected' : ''}>E</option>
+                </select>
+                <br><br><br>
+                <label for="name" >Student Name :</label>
+                <input name="name" class="s" type="text" placeholder="Enter Student Name" value="${found.name}" required aria-required="true">
+                <br><br><br>
+                <label for="Gender"><b>Gender :</b></label>
+                <select name="gender" required>
+                    <option value="MALE" ${found.section === 'MALE' ? 'selected' : ''}>MALE</option>
+                    <option value="FEMALE" ${found.section === 'FEMALE' ? 'selected' : ''}>FEMALE</option>
+                </select>
+                <br><br><br>
+                <label for="dob" >DOB :</label>
+                <input name="dob" class="s" type="date"  placeholder="Enter DOB" value="${found.dob}" required aria-required="true">
+                <br><br><br>
+                <label for="usn" >USN :</label>
+                <input name="usn" class="s" type="text"  placeholder="Enter USN" value="${found.usn}" required aria-required="true">
+                <br><br><br>
+                <label for="cgpa" >CGPA :</label>
+                <input name="cgpa" class="s" type="number" step="0.01" placeholder="Enter CGPA" value="${found.cgpa}" required aria-required="true">
+                <br><br><br>
+                <label for="email" >Email ID :</label>
+                <input name="email" class="s" type="email" placeholder="Enter Email" value="${found.email}" required aria-required="true">
+                <br><br><br>
+                <label for="no" >Mobile No. :</label>
+                <input name="mobNo" class="s" type="number" max="10000000000" placeholder="Enter Mobile No." value="${found.mobNo}" required aria-required="true">
+                <br><br><br>
+                <label for="fname" >Father's Name :</label>
+                <input class="s" name="fname" type="text" placeholder="Enter Father's Name" value="${found.fname}" required aria-required="true">
+                <br><br><br>
+                <label for="mname" >Mother's Name :</label>
+                <input class="s" name="mname" type="text" placeholder="Enter Mother's Name" value="${found.mname}" required aria-required="true">
+                <br><br><br>
+                <button type="submit"> Submit </button>
+            </div>
+        </form>
+            `
+            Student.appendChild(details)
+        }
+        function gotoDashboard(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target)
+            let entries = Object.fromEntries(formData)
+            entries = {
+                ...found,...entries
+            }
+            let newData = []
+            newData.push(entries)
+            let current = localStorage.getItem("students")
+            current = JSON.parse(current)
+            current = current.filter((s) => s.usn != usn.value)
+            newData = [...current, entries]
+            localStorage.setItem("students", JSON.stringify(newData))
+
+            window.alert("Student Record Edited Succesfully!!");
+            window.location.href = "dashboard.html";
+
+        }
+        function gotoMain(event) {
+            event.preventDefault();
+            window.location.href = "front.html";
+        }
+        function gotoDash(event) {
+            event.preventDefault();
+            window.location.href = "dashboard.html";
+        }
+        function gotoDetails(event) {
+            const details = document.getElementById("details")
+            details.style.display = "block"
+            const general = document.getElementById("general")
+            general.style.display = "none"
+        }
+    </script>
+</body>
+
+</html>

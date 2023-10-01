@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The AcademicsVault</title>
+  <link rel="stylesheet" href="front.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+  <header class="header">
+    <a style="font-size:35px;" class="logo">The AcademicsVault</a>
+    <nav class="navbar1">
+      <a href="#home">home</a>
+      <a href="#login">login</a>
+      <a href="#about">about</a>
+      <a href="repository.html">repository</a>
+      <a href="#contactus">contact us</a>
+    </nav>
+  </header>
+  <div>
+    <p class="p1">Pioneering education excellence</p>
+    <br>
+    <p class="p2">Elevate learning through pristine records</p>
+  </div>
+  <div id="login" class="booking__container">
+    <form onsubmit="gotoDashboard(event)">
+      <div class="form__group">
+        <div class="input__group">
+          <input type="text" required aria-required="true">
+          <label>User Name</label>
+        </div>
+        <p>enter user name</p>
+      </div>
+      <div class="form__group">
+        <div class="input__group">
+          <input type="password" required aria-required="true">
+          <label>Password</label>
+        </div>
+        <p>enter password</p>
+      </div>
+      <button id="b1" type="submit">Login</button>
+    </form>
+
+  </div>
+
+  <div class="image-section" id="log">
+  </div>
+
+  <div class="login-section" id="home"> </div>
+
+  <div class="box" id="home"></div>
+
+  <div class="about-section" id="about" style="  font-family: 'Courier New', Courier, monospace;">
+    <h1 style="font-size: 30px;">About Us</h1>
+    <p style="font-size: 18px; line-height: 1.5">
+      Welcome to AcademicsVault, your ultimate destination for modernizing academic record management. We are dedicated
+      to empowering educational institutions with cutting-edge technology that simplifies and enhances the way student
+      records are managed.
+    </p>
+    <p style="font-size: 18px; line-height: 1.5">
+      At AcademicsVault, we understand the challenges educational institutions face in maintaining accurate and
+      efficient student records. Our platform offers a comprehensive solution that encompasses student information,
+      academic progress, attendance, and more, all within a user-friendly interface. Our goal is to free educators from
+      administrative burdens, allowing them to focus on what truly matters – providing quality education.
+    </p>
+    <p style="font-size: 18px; line-height: 1.5">
+      Welcome to the future of organized, efficient, and technology-driven academic administration – welcome to
+      AcademicsVault.
+    </p>
+  </div>
+
+  <div id="contactus" class="contact__container">
+    <h1 style="font-size: 30px; font-family: 'Courier New', Courier, monospace;">CONTACT US</h1>
+    <a href="https://www.instagram.com/nhce.official/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com/nhceofficial/" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.linkedin.com/linkedin-url" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://twitter.com/twitter-handle" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.youtube.com/channel/youtube-channel" target="_blank"><i class="fab fa-youtube"></i></a>
+    <a href="mailto:theacademicsvault@gmail.com"><i class="far fa-envelope"></i></a>
+    <a href="tel:+918861599845"><i class="fas fa-phone"></i></a>
+    <a href="https://api.whatsapp.com/send?phone=+918861599845"><i class="fab fa-whatsapp"></i></a>
+  </div>
+
+  <script>
+    function gotoDashboard(event) {
+      event.preventDefault();
+      var userNameInput = document.querySelector('input[type="text"]').value;
+      var passwordInput = document.querySelector('input[type="password"]').value;
+      var correctUserName = "tav";
+      var correctPassword = "tav123";
+      if (userNameInput === correctUserName && passwordInput === correctPassword) {
+        window.location.href = "dashboard.html";
+      } else {
+        alert("Invalid username or password. Please try again.");
+      }
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+  background-size: cover;
+  background-color: #f0f0f0;
+  background-size: 100%;
+  background-position-x: 0;
+  background-position-y: 7rem;
+  font-weight: bold;
+}
+
+.main {
+  position: relative;
+  top: 13rem;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 6rem;
+}
+
+.contact__container {
+  text-align: center;
+  padding: 2rem;
+  position: absolute;
+  top: 25rem;
+  left: 7rem;
+  border: 2px solid black;
+  border-radius: 2rem;
+  width: 55rem;
+}
+
+.contact__container p {
+  color: black;
+  margin-bottom: 1rem;
+  font-weight: bolder;
+  font-size: 4rem;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.contact__container a {
+  display: inline-block;
+  margin: 0.5rem 2.5rem;
+  font-size: 5rem;
+  color: #10221b;
+  text-decoration: none;
+  transition: color 0.3s;
+
+  &:hover {
+    color: #949665;
+  }
+
+  &:active {
+    color: red;
+  }
+}
+
+.right {
+  width: 55rem;
+  position: absolute;
+  right: 7rem;
+  top: 25rem;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #f0f0f0;
+  padding: 2.5rem;
+  border: 2px solid black;
+  border-radius: 2rem;
+}
+
+.right .text {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.right .fields {
+  display: flex;
+}
+
+.right .field.name,
+.right .field.email {
+  width: 48%;
+}
+
+.right .field.name {
+  margin-right: 4%;
+}
+
+.right input[type="text"],
+.right input[type="email"],
+.right textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 0.1rem solid #ccc;
+  border-radius: 2rem;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+
+.right .bttn button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 1.5rem 2rem;
+  cursor: pointer;
+  border-radius: 3rem;
+}
+
+.right .bttn {
+  text-align: center;
+}
