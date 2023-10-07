@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+
+</head>
+
+<body>
+    <section id="header">
+        <p class="logo" style="font-size: 30px;">JordanStore</p>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop1.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a class="active"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="page-header">
+        <h2>Let's Talk</h2>
+        <p>We would love to hear more from you!</p>
+    </section>
+
+    <section class="section-p1" id="cart">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td>Remove</td>
+                    <td>Images</td>
+                    <td>Product</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Sub Total</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href=""><i class="far fa-times-circle"></i></a></td>
+                    <td><img src="images/Air Jordan 1 Elevate Low SE.jpeg" alt=""></td>
+                    <td>Air Jordan 1 Eleveate Low SE</td>
+                    <td>₹ 12,795</td>
+                    <td><input type="number" value="1"></td>
+                    <td>₹ 12,795</td>
+                </tr>
+                <tr>
+                    <td><a href=""><i class="far fa-times-circle"></i></a></td>
+                    <td><img src="images/Luka 2 'Lake Bled' PF.jpeg" alt=""></td>
+                    <td>Luka 2 'Lake Bled' PF</td>
+                    <td>₹ 12,795</td>
+                    <td><input type="number" value="1"></td>
+                    <td>₹ 12,795</td>
+                </tr>
+                <tr>
+                    <td><a href=""><i class="far fa-times-circle"></i></a></td>
+                    <td><img src="images/Jordan Granville Pro.webp" alt=""></td>
+                    <td>Jordan Granville Pro</td>
+                    <td>₹ 12,295</td>
+                    <td><input type="number" value="1"></td>
+                    <td>₹ 12,295</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="cart-add" class="section-p1">
+        <div id="coupon">
+            <h3>Apply Coupon</h3>
+            <div>
+                <input type="text" placeholder="Enter your Coupon">
+                <button class="normal">Apply</button>
+            </div>
+        </div>
+
+        <div id="subtotal">
+            <h3>Cart Total</h3>
+            <table>
+                <tr>
+                    <td>Cart Subtotal</td>
+                    <td>₹ 37,885</td>
+                </tr>
+                <tr>
+                    <td>Shipping</td>
+                    <td>Free</td>
+                </tr>
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td><strong>₹ 37,885</strong></td>
+                </tr>
+            </table>
+            <button class="normal">Proceed to Checkout</button>
+        </div>
+    </section>
+
+    <p class="section-p1" style="font-size: 30px;">JordanStore</p>
+    <footer class="section-p1">
+        <div class="col">
+            <h4>Contact</h4>
+            <p><strong>Address: </strong>NR Layout, GB Palya, Bangalore</p>
+            <p><strong>Phone: </strong>+91 8861599845</p>
+            <p><strong>Hours: </strong>9:00 AM - 11:00 PM, Mon-Sat</p>
+        </div>
+        <div class="follow">
+            <h4>Follow Us</h4>
+            <div class="icon">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-pinterest-p"></i>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a><br>
+            <a href="#">Privacy Policy</a><br>
+            <a href="#">Terms & Conditions</a><br>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign in</a><br>
+            <a href="#">Track my Order</a><br>
+            <a href="#">Help</a><br>
+        </div>
+    </footer>
+
+    <script>
+        function signup() {
+            var email = document.getElementById("emailInput").value;
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (emailRegex.test(email)) {
+                alert("You have successfully registered for email updates! Thank you for subscribing.");
+                window.location.reload();
+            } else {
+                alert("Invalid email address. Please enter a valid email.");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
