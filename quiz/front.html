@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Quiz</title>
+    <link rel="stylesheet" type="text/css" href="front.css">
+</head>
+
+<body>
+    <section class="header">
+        <h1>Quiz</h1>
+    </section>
+    <section class="intro">
+        <div class="login-container">
+            <div class="login">
+                <h2>LOGIN</h2>
+            </div>
+            <div>
+                <form id="login-form">
+                    <div class="info">
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        <br><br>
+                    </div>
+                    <div class="button">
+                        <button type="submit" id="submitBtn">Start</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const loginForm = document.getElementById("login-form");
+
+            const saveUsernameToLocalStorage = (username) => {
+                let usernames = JSON.parse(localStorage.getItem('usernames')) || [];
+                usernames.push(username);
+                localStorage.setItem('usernames', JSON.stringify(usernames));
+                currentUsername = username;
+            };
+
+            loginForm.addEventListener('submit', (event) => {
+                event.preventDefault();
+                const name = document.getElementById("name").value;
+                saveUsernameToLocalStorage(name);
+                window.location.href = "index.html";
+            });
+        });
+
+    </script>
+</body>
+
+</html>

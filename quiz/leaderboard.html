@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Leaderboard</title>
+    <link rel="stylesheet" href="leaderboard.css">
+</head>
+
+<body>
+    <div class="leaderboard">
+        <h1>Leaderboard</h1>
+        <table>
+            <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Score</th>
+            </tr>
+        </table>
+        <div class="buttons">
+            <button class="exit" onclick="goToFrontPage()">Exit</button>
+        </div>
+    </div>
+
+    <script>
+        function goToFrontPage() {
+            window.location.href = 'front.html';
+        }
+
+        function goToHomePage() {
+            window.location.href = 'index.html';
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const leaderboardTable = document.querySelector('.leaderboard table');
+            const scores = JSON.parse(localStorage.getItem('scores')) || [];
+            scores.sort((a, b) => b.score - a.score);
+            for (let i = 0; i < scores.length; i++) {
+                const rank = i + 1;
+                const name = scores[i].userName;
+                const score = scores[i].score;
+                const row = document.createElement('tr');
+                row.innerHTML = `<td>${rank}</td><td>${name}</td><td>${score}</td>`;
+                leaderboardTable.appendChild(row);
+            }
+        });
+    </script>
+</body>
+
+</html>
